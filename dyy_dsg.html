@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+
+	<script>
+	$(document).ready(function(){
+		$('button').click(function(){
+			alert('出来吧:'+ $("#www").val());
+		});
+
+		$('button').click(function(){
+			alert("您好:" + $("#nh").val());
+		})
+		
+	})
+	</script>
+</head>
+<body>
+	<p> 干啥的<input type="text"  id="www" value="管你屁事"> </p>
+	<p>你好 <input type="text" id="nh" value="好个起码子"> </p>
+	<button>给我出来</button>
+</body>
+</html>

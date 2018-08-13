@@ -1,0 +1,26 @@
+.<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+		<script src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("lable").mouseenter(function(){
+			$("#ts").show();
+		});
+
+		$("lable").mouseleave(function(){
+			$("#ts").heid();
+			alert('HTML:'+$("#test").html());
+		})
+	})
+	</script>
+</head>
+<body>
+<label for=""> <input type="checkbox">可能会有提示</label>
+
+	<div id="ts" style="heid">我是提示</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<script src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+
+		<script>
+		$(document).ready(function(){
+			$('div').mouseenter(function(){
+				$('div').css("background","#ccc");
+			});
+
+			$('div').mouseleave(function(){
+				$('div').css("background","pink");
+			})
+		})
+		</script>
+</head>
+<style>
+div{height: 100px; width: 100px; background: pink;}
+</style>
+<body>
+	<div>我也不知道说点啥</div>
+</body>
+</html>

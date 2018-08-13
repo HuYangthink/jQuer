@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://apps.bdimg.com/libs/jquery/1.6.4/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#but1").click(function(){
+                $("#test1").text("hello world!");
+            });
+            $("#but2").click(function(){
+                $("#test2").html("<b>hello world!</b> ");
+            });
+            $("#but3").click(function(){
+                $("#test3").val("学技能了");
+            });
+        })
+    </script>
+</head>
+<body>
+<p id="test1">这是一行字</p>
+<p id="test2">这也是一行字</p>
+<p>这是输入框：<input type="text" id="test3" value="这是我新学习的技能"></p>
+<button id="but1">第一</button>
+<button id="but2">第二</button>
+<button id="but3">第三</button>
+</body>
+</html>

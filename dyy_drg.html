@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$('#hs').click(function(){
+				$('.box').css("background","red");
+			});
+
+			$("#ls").click(function(){
+				$(".box").css("background","green");
+			});
+
+			$('#fs').click(function(){
+				$('.box').css("background","pink");
+			})
+		})
+	</script>
+</head>
+
+<style>
+body{
+	background: #ccc;
+}
+</style>
+<body class="box">
+	<button id="hs">红色</button>
+	<button id="ls">绿色</button>
+	<button id="fs">粉红色</button>
+</body>
+</html>

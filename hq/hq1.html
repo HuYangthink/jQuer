@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+
+	<script>
+	$(document).ready(function(){
+		$('.button1').click(function(){
+			alert('Text:'+ $('#z').text());
+		});
+
+		$('.button2').click(function(){
+			alert('html:' + $('#z').html());
+		});
+
+		$('.button3').click(function(){
+			alert('我是:' + $('.bb').val());
+		});
+	});
+
+	</script>
+</head>
+<body>
+
+	<p id="z">这是段落中的 <b>粗体</b> <input type="text" class="bb" value="你爸爸">文本 </p>
+	<button class="button1">显示文本</button>
+	<button class="button2">显示HTML</button>
+	<button class="button3">获取输入字段的值</button>
+</body>
+</html>

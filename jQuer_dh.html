@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://apps.bdimg.com/libs/jquery/1.6.4/jquery.js"></script>
+    <script type="text/javascript" >
+        $(document).ready(function(){
+            $("button").click(function(){
+                var div= $('#div');
+                div.animate({left:"100px",width:"180px"},"slow");
+                div.animate({fontSize:"2em"},"slow");
+            });
+        });
+    </script>
+</head>
+<body>
+<button>点击动画</button>
+<div id="div" style="background-color:green; height: 100px;width: 100px; position: absolute;">hello world!</div>
+</body>
+</html>
