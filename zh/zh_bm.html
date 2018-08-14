@@ -1,0 +1,521 @@
+<!--<!DOCTYPE html>-->
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>广元协和医院</title>
+    <link href="../layui-v2.3.0/layui/css/layui.css">
+    <script href="../layui-v2.3.0/layui/layui.js"></script>
+
+    <style>
+        *{margin:0;padding:0;/*box-sizing:border-box;-webkit-box-sizing:border-box;*/}
+        body{max-width:640px;margin:0 auto;font-family:"微软雅黑";font-size:14px;}
+        div#LRdiv1{display:none!important;}
+        ins#LXB_CONTAINER_SHOW,ins#LXB_CONTAINER{display:none!important;}
+        body{background:#ebebeb;overflow:scroll;}
+        .ly-header{position:fixed;top:0;z-index:10;width:100%;max-width:640px; height:50px;background:#1855a4 ;}
+        .ly-header nav{height:50px;background:#393a3f;}
+        /*.ly-header nav a:nth-child(1){float:left;width:50px;height:50px;background:url(wechat.gif) no-repeat scroll 20px 18px;}*/
+        .ly-header nav a i{float:right;width:1px;height:20px;margin:15px 0 0 0;background:#2e2e32}
+        .ly-header nav h2{color:#FFF;font-size:16px;line-height:50px;text-indent:10px;}
+        /*.ly-header nav a:nth-child(2){float:right;width:115px;height:50px;background:url(wechat.gif) no-repeat scroll 0px -33px;}*/
+
+        .ly-section1{height:120%;padding:40px 0 0 0;background:#ebebeb}
+        .ly-section1 .line{margin:0 0 0 10px;}
+        .ly-section1 .left{float:left;max-width:80%;margin:10px 0 0 0; }
+        .ly-section1 .left div{position:relative;margin:0 0 0 55px;padding:10px;background:#FFF;color:#323232;border:1px solid #d5d5d5; border-radius:6px;}
+        .ly-section1 .left div i{position:absolute;top:12px;left:-20px;width:20px;height:20px;background:url(wechat.gif) no-repeat scroll 0 -200px;transform:rotate(-180deg)}
+        .ly-section1 .left img{float:left;margin:0 5px 0 0;}
+        .ly-section1 .left div img{float:none;}
+        .ly-section1 figure{ width:95%; margin:15px auto 5px;overflow:hidden; border-bottom:1px solid #CCCCCC; padding-bottom:5px;}
+        .left_top{width:35%; float:left;}
+        .top_img{position:relative; overflow:hidden; }
+        .ly-section1 .zzh{ width:100%;float:left; display:block;padding-top:10px;}
+        .ly-section1 .ico{width: 50%;margin-left: -25%;position: absolute;bottom: 6%;left: 50%;}
+        .ly-section1 figcaption{ width:63%; float:left; margin-left:2%;}
+        .lcjy{ text-align:center; color:#fd8a01;}
+        .wxdoctxt h4{border-bottom: 1px solid #ebebeb;padding-bottom: 5px;}
+        .wxdoctxt i{display: inline-block;font-size: 12px;color: #FC89A8;border: 1px solid #FC89A8;font-style: normal;font-weight: normal;margin-left: 6px;padding: 0 5px;border-radius: 2px;}
+        .wxdoctxt p{ margin-top:6px;}
+        .wxdoctxt .txt-01 span{display: inline-block;margin-right: 6px;}
+        .num{background-color: #ebebeb;padding:0 5px;}
+        .num i{font-style: normal;color: #fd8a01;padding-left: 2px;}
+
+        .txt-02 a{display: inline-block;overflow: hidden;padding-right: 10px;width: 33.3333%;}
+        .img-responsive{display: block;max-width: 100%;}
+
+
+        .ly-footer{position:fixed;bottom:0;width:100%;max-width:640px;height:50px;background:#FFF;border-top:1px solid #bfbfbf}
+        .ly-footer div{width:100%;}
+        .ly-footer div:nth-child(1){max-width:50px;}
+        .ly-footer div:nth-child(1){max-width:50px;}
+        .ly-footer div:nth-child(3){max-width:50px;}
+        .ly-footer div:nth-child(1) a{float:left;width:50px;height:50px;background:url(wechat.gif) no-repeat scroll 9px -89px;}
+        .ly-footer div:nth-child(2) textarea{width:80%;height:36px;margin:7px 0 0 0px;color:#000;font-size:18px;line-height:35px;border:none;border-bottom:1px solid #d8d8d8;transition:0.3s;resize:none;overflow-y:auto;outline:none;}
+        .ly-footer div:nth-child(2) textarea:focus{border:none;border-bottom:1px solid #45c01a;}
+        .ly-footer div:nth-child(2) textarea.on{border-bottom:#45c01a}
+        .ly-footer div:nth-child(2) i{}
+        .ly-footer div:nth-child(3) a{position:absolute;top:0;right:0;width:65px;height:35px;margin:7px 5px 0 0;background:#45c01a;color:#FFF;text-align:center;line-height:35px;border-radius:5px;cursor:pointer;transition:0.3s;}
+        .ly-footer div:nth-child(3) a:hover{background-color:#3aa814;}
+
+        .ly-clear{clear:both;}
+        .ly-hide{display:none;}
+
+
+        .ly-animation-bell{display:inline-block;color:#F00;transition:0.5s;}
+        .ly-animation-bell.on{animation:ly-animation-bell 0.5s;}
+
+        @keyframes ly-animation-bell{
+            0%{transform:rotate(-5deg);}
+            20%{transform:rotate(10deg);}
+            40%{transform:rotate(-15deg);}
+            60%{transform:rotate(20deg);}
+            80%{transform:rotate(-15deg);}
+            100%{transform:rotate(10deg);}
+        }
+        /********nav********/
+        .nav{ overflow:hidden;}
+        .nav ul{width:96%; margin:0 auto; overflow:hidden}
+        .nav ul p{ overflow:hidden;}
+        .nav ul li{ float:left; list-style-type:none; width:14.28%; text-align:center; height:2.5em; line-height:2.5em; }
+        .nav ul li a{ border:1px solid #999; text-decoration:none; padding:5px 7px; color:#333;}
+
+
+        #hs a{
+            text-decoration: none;
+            color:red;
+        }
+        #fhsy{
+            height:49px;
+            width:40px;
+            float: right;
+            color: #fff;
+            text-align: center;
+            margin-top: 10px;
+        }
+        #fhsy a{
+            text-decoration: none;
+            color: #fff;
+        }
+        }
+        .ly-header img{
+            height:49px;
+            width:49px;
+            /*border:1px solid #000;*/
+            position: absolute;
+        }
+        #test1{
+            height:49px;
+            width:250px;
+            /*border:1px solid #000;*/
+            position: absolute;
+            margin-left:30%;
+        }
+        /*.ly-header{*/
+        /*width: 100%; height: 739.5px; border: 1px solid #000;  position: relative;overflow: hidden;*/
+        /*}*/
+        .ly-header ul li img{
+            height:100%; width: 100%;
+        }
+
+        li{
+            width: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            font-size:18px;
+            color: #fff;
+            line-height:49px;
+            list-style: none;
+            text-align: center;
+            line-height:49px;
+        }
+
+        #jdzx_box{
+            max-width:640px;
+            height:40px;
+
+            /*border:1px solid #000;*/
+        }
+        #zxjd{
+            height:40px;
+            max-width:230px;
+            width:150px;
+            /*border:1px solid #000;*/
+            text-align: center;
+            line-height:40px;
+            position: absolute;
+            margin-left:1%;
+            background:pink;
+            font-weight:bold;
+            border-radius: 5px;
+
+        ;
+            /*margin: 0px auto;*/
+            margin-bottom:20px;
+            /*border:1px solid #9BDF70;*/
+            background-color: #DBA901;
+        }
+        #zxjd a {text-decoration: none;
+            color: #fff;
+            /*margin-left: 40%;*/
+        }
+
+        #dhzx{
+            height:40px;
+            /*max-width:230px;*/
+            width:150px;
+            /*border:1px solid #000;*/
+            text-align: center;
+            line-height:40px;
+            margin-left:25%;
+            position: absolute;
+            border-radius: 5px;
+
+            font-weight:bold;
+
+            /*margin: 0px auto;*/
+            margin-bottom:20px;
+            /*border:1px solid #96C2F1;*/
+            background-color: #45c01a;
+        }
+        #dhzx a{ text-decoration: none;
+            color: #fff;
+            /*margin-left: 40%;*/
+        }
+
+        #djbd{
+            height:50px;
+            width:100px;
+            /*border:1px solid #000;*/
+            position: absolute;
+            margin-left: 11%;
+        }
+        #djbd a{
+            text-decoration: none;
+            color:red;
+        }
+        /*@media screen and (max-width:1980px){}*/
+
+        @media screen and (max-width:1580px){
+            #test1 {
+                height: 49px;
+                width: 200px;
+                margin-left:38%;
+            }
+            #djbd{
+                width:100px;
+                margin-left: 12%;
+            }
+            #fhsy{
+                margin-top: 5px;
+            }
+            #dhzx{margin-left: 31%;}
+            #zxjd{
+                margin-left: 5%;
+            }
+        }
+        @media screen and (max-width:1180px)
+        {
+            #dhzx{margin-left: 35%;}
+            #test1 {
+                height: 49px;
+                width: 200px;
+                margin-left:35%;
+            }
+            #djbd{
+                width:100px;
+                margin-left: 20%;
+            }
+        }
+        @media screen and (max-width:980px)
+        {
+            body{
+                font-size:16px;
+            }
+            #test1{
+                height:49px;
+                width:230px;
+                margin-left:33%;
+            }
+            #zxjd{
+                width:200px;
+                border-radius:5px;
+            }
+
+
+
+
+            #dhzx{
+                width:200px;
+                margin-left: 50%;
+            }
+            #gg{
+                width:100%;
+                height:60px;
+            }
+            #djbd a{
+                font-size:14px;
+                padding: 0;
+                text-align: center;
+                line-height:15px;
+                /*margin-left: 10%;*/
+
+            }
+            #djbd{
+
+                height:45px;
+                width:100px;
+                margin-left: 25%;
+            }
+
+            /*@media screen and (max-width:680px){*/
+            /*#test1{*/
+            /*height:49px;*/
+            /*width:230px;*/
+            /*margin-left:30%;*/
+            /*}*/
+            @media screen and (max-width:580px)
+            {
+                body{
+                    font-size:14px;
+                }
+                #test1{
+                    height:49px;
+                    width:240px;
+                    margin-left:23%;
+                }
+                #zxjd{
+                    width:130px;
+                    margin-left: 8%;
+                }
+                #dhzx{
+                    width:130px;
+                    margin-left:57%;}
+                #gg{
+                    height:60px;
+                }
+                /*#fhsy{*/
+                /*margin-top: 10px;*/
+                /*}*/
+                #djbd{
+                    height:30px;
+                    width:100px;
+                    /*border:1px solid #000;*/
+                    margin-left: 30%;
+                }
+                #djbd a{
+                    font-size:12px;
+                    padding: 0;
+                    text-align: center;
+                    line-height:15px;
+                    /*margin-left: 10%;*/
+                }
+                @media screen and (max-width:380px) {
+                    body {
+                        font-size: 10px;
+                    }
+
+                    #test1 {
+                        height: 49px;
+                        width: 200px;
+                        margin-left:25%;
+                    }
+                    #djbd{
+                        height:30px;
+                        width:70px;
+                        /*border:1px solid #000;*/
+                        margin-left: 35%;
+                    }
+                    #djbd a{
+                        font-size:10px;
+                        padding: 0;
+                        text-align: center;
+                        line-height:15px;
+                        /*margin-left: 10%;*/
+                    }
+                    #zxjd {
+                        width: 140px;
+                    }
+                    .ly-header #dhzx{
+                        width:100px;
+                        margin-left: 45%;
+                    }
+                    #fhsy{
+                        margin-top: 15px;
+                    }
+                }
+                #gg{
+                    height:60px;
+                }
+                #yytb{
+                    height:49px;
+                    width:49px;}
+
+            }
+
+
+    </style>
+<body>
+
+
+<header class="ly-header">
+
+    <img id="yytn" style="height: 49.6px; width: 49.6px; position:absolute;" src="http://m.0839fkyy.com/web/img/aa.jpg" alt="">
+    <div id="test1">
+
+        <li>广元协和医院</li>
+        <li style="display: none" >广元市中心医院指导医院</li>
+
+
+    </div>
+    <div id="fhsy"><a href="http://pdt.zoosnet.net/LR/Chatpre.aspx?id=PDT76129369&lng=cn">返回<br>首页</a></div>
+</header>
+<section class="ly-section1">
+    <figure>
+        <div class="left_top">
+            <p class="top_img"> <img style="margin-top: 10px" class="zzh" src="http://m.0839fkyy.com/web/img/zdy.jpg"></p>
+        </div>
+        <figcaption>
+            <div class="wxdoctxt">
+                <!--<div id="djbd"><a href="tel:0839-5513677">点击拨打电话：-->
+                <!--<hr>0839-5513677</a> </div>-->
+                <p><b>名称：</b>张大勇</p>
+                <p><b>性质：</b>外科主治医师</p>
+                <p><b>简介：</b>毕业于华西医科大学，师从四川省著名肛肠病专家徐廷翰教授，从事临床工作20余年，一直致力于肛肠病、腋臭的诊治工作。擅长采用韩式整形术微创治疗腋臭（狐臭）、汗臭；传统技术与PPH微创技术相结合治疗内痔、外痔、混合痔、肛裂、肛瘘、肛周脓肿、肛管狭窄、肛周瘙痒、肛周湿疣等。开展了近万例手术，积累了丰富的临床经验， 得到广大患者的高度信赖。</p>
+                <p><b>医院特色：</b><span style="color:red">知名专家、免费停车、医保定点、免费wifi</span></p>
+
+            </div>
+        </figcaption>
+    </figure>
+    <div id="jdzx_box">
+
+        <div id="zxjd">
+            <!--<img style="height: 40px; width: 40px; position: absolute;" src="../img/ksrl.jpg" alt="">-->
+            <a href="http://pdt.zoosnet.net/LR/Chatpre.aspx?id=PDT76129369&lng=cn"> 在线解答</a>
+        </div>
+
+
+        <div id="dhzx" >
+            <!--<img style="height: 40px; width: 40px; position: absolute; margin:0px;" src="../img/dhsj.jpg" alt="">-->
+            <a href="tel:0839-5513677">电话咨询</a>
+        </div>
+    </div>
+
+
+    <div id="gg" style="height: 40px;  max-width:640px; margin-top: 10px; text-align: center;  background:#1855a4; color: #fff; font-size: 14px; font-weight:bold;"    >
+        <p style="height: 50px; font-size: 14px; line-height: 40px;">为庆祝建院13周年，院庆期间 携手广元市中心医院特约</p>
+        <p style="display: none;line-height: 40px;">专家展开大型义检义诊活动</p>
+        <p style="display: none;line-height: 40px;">男科功能检查、前列腺常规及B超检查等每项仅收<span style="color: red; font-size: 18px;">13</span>元</p>
+        <p style="display: none;line-height: 40px;">早泄将敏术援助<soan style="color: red; font-size: 18px;">130</soan>元</p>
+        <p style="display: none;line-height: 40px;">包皮整形术援助 <span style="color: red; font-size: 18px;">130</span> 元</p>
+    </div>
+    <div class="line ly-hide">
+        <div class="left"> <img src="http://m.0839fkyy.com/web//img/zdy.jpg" width="50px" height="50px" style="width:50px;height:50px">
+            <div><i></i>您好！<img   src="http://m.0839fkyy.com/web//img/hh.png"/> </div>
+        </div>
+        <div class="ly-clear"></div>
+    </div>
+    <div class="line ly-hide">
+        <div class="left"> <img src="http://m.0839fkyy.com/web//img/zdy.jpg" width="50px" height="50px" style="width:50px;height:50px">
+            <div> <i></i> 关于 <spap  id="hs"><a href="http://pdt.zoosnet.net/LR/Chatpre.aspx?id=PDT76129369&lng=cn"> 【便秘】</a> </spap>的问题，很荣幸为您解答疑问   </div>   <!--<img src="http://m.0839fkyy.com/web/1111.gif" alt="">-->
+        </div>
+        <div class="ly-clear"></div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+</section>
+<footer class="ly-footer">
+    <div><a href="tel:0839-5513677"></a></div>
+    <div>
+        <textarea></textarea>
+        <i></i> </div>
+    <div><a>发送</a></div>
+</footer>
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+<script src="http://pdt.zoosnet.net/JS/LsJS.aspx?siteid=PDT76129369&float=1"></script>
+<!--<script src="//pdt.zoosnet.net/JS/LsJS.aspx?siteid=PDT76129369&lng=cn&float=0"></script>-->
+
+<script type="text/javascript">
+
+
+    window.onload = function (){
+        var  box= document.getElementById("test1");
+        var  li = document.getElementById('test1').getElementsByTagName('li');
+        var i= 0;
+        var len = li.length;
+        setInterval(function(){
+            li[i].style.display = 'none';
+            i = ++i==len?0:i;
+            li[i].style.display = 'inline-block';
+        },5000);}
+
+    var  gg= document.getElementById("gg");
+    var p = document.getElementById('gg').getElementsByTagName('p');
+    var a= 0;
+    var len = p.length;
+    setInterval(function(){
+        p[a].style.display = 'none';
+        a = ++a==len?0:a;
+        p[a].style.display = 'block';
+    },5000);
+
+
+
+
+    var $wd='',
+            $val='',
+            $chant_url='http://pdt.zoosnet.net/LR/Chatpre.aspx?id=PDT76129369&lng=cn',
+            func_click=function(){
+                try{
+                    openZoosUrl('chatwin','&e=');
+                }catch(err){
+                    window.location.href="http://pdt.zoosnet.net/LR/Chatpre.aspx?id=PDT76129369&lng=cn&input_wd="+$val+"&e=ly"+$wd;
+                }
+            };
+
+
+
+    $(".ly-footer div:last a").on("click",function(){
+        $val=decodeURIComponent($(".ly-footer textarea").val());
+        func_click();
+    });
+
+    setTimeout(function(){$('.ly-section1 .line:first').fadeIn(100)},1000);
+    setTimeout(function(){$('html, body').animate({scrollTop: $(document).height()},400)},1000);
+    setTimeout(function(){$('.ly-section1 .line:last').fadeIn(200)},2500);
+
+
+
+    $(".ly-section1 .left img").on("click").on("click",func_click);
+
+    $(".ly-header nav a:eq(0)").on("click").on("click",func_click);
+    $("textarea").on("click").on("click",func_click);
+
+
+    setTimeout(function(){
+        $(".ly-section1 .line:last .left div img").addClass("ly-animation-bell").addClass("on");
+    },6000);
+
+
+</script>
+<!--<script type="text/javascript">-->
+
+<!--setInterval(function(){-->
+<!--$("#LRdiv1").css({"display":"none"});-->
+<!--$("#LRdiv2").css({"display":"none"});-->
+<!--$("#LRdiv3").css({"display":"none"});-->
+<!--$("#LRdiv4").css({"display":"none"});-->
+<!--$("#_ks_ol_inviteWin").css({"display":"none"});-->
+<!--},100)-->
+<!--</script>-->
+
+<!--<script src="//a.liyang1.com/in_web_head.js?id=955" charset="UTF-8"></script>-->
+
+</body>
+</html>
