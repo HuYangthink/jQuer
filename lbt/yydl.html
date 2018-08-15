@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+</head>
+<style>
+    *{
+        margin:0; padding: 0; list-style: none;
+    }
+    #box{
+        width: 100%; height: 739.5px; border: 1px solid #000;  position: relative;overflow: hidden;
+    }
+    #box ul li img{
+        height:100%; width: 100%;
+    }
+
+    li{
+        width: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+    }
+
+    </style>
+<body>
+<div id="box">
+    <ul>
+        <li><img src="../lbt/img/pkq.gif" alt=""> </li>
+        <li><img src="../lbt/img/pkq2.gif" alt=""></li>
+        <li><img src="../lbt/img/pkq4.gif" alt=""></li>
+        <li><img src="../lbt/img/pkq3.gif" alt=""></li>
+        <li><img src="../lbt/img/tc5.jpg" alt=""></li>
+        <li><img src="../lbt/img/tc6.jpg" alt=""></li>
+        <li><img src="../lbt/img/3.jpg" alt=""></li>
+    </ul>
+</div>
+
+
+<script>
+
+
+    window.onload = function (){
+        var  box= document.getElementById("box");
+        var  li = document.getElementById('box').getElementsByTagName('li');
+        var i= 0;
+        var len = li.length;
+        setInterval(function(){
+            li[i].style.display = 'none';
+            i = ++i==len?0:i;
+            li[i].style.display = 'inline-block';
+        },5000);
+
+
+
+
+
+    }
+
+
+</script>
+</body>
+</html>

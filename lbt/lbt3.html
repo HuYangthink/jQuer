@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		.box{
+			height: 400px;
+			width: 600px;
+			border: 1px solid #000;
+			margin:0 ;
+			padding: 0;
+
+		}
+		.box_ul{
+			height: 400px;
+			width: 1850px;
+			list-style: none;
+			padding: 0;
+			/*overflow: hidden;*/
+			position: absolute;
+			
+
+		}
+		.box_ul li{
+			/*position: absolute;*/
+			padding: 0;
+			position: relative;
+			float: left;
+			padding: 5px;
+
+		}
+		.box_ul li img{
+
+			height: 395px; width: 600px;
+			padding: 0;
+			
+		}
+
+		.zb{height: 150px;
+		 width: 100px; font-size: 100px;/*position: absolute;*/ text-align: center;line-height: 150px; border: 1px solid #000;}
+	</style>
+	<script type="text/javascript">
+		var timer=null, index=0;
+		
+		// 定义并调用自动播放器
+		if(timer){
+			cleatInterval(timer);
+			timer=null;
+		}
+		timer=setInterval(autoplay,2000);
+	</script>
+</head>
+<body>
+<div class="box ">
+	<ul class="box_ul">
+		<li>
+			<img src="img/1.jpg">
+		</li>
+		<li>
+			<img src="img/2.jpg">
+		</li>
+		<li>
+			<img src="img/3.jpg">
+		</li>
+	</ul>
+
+<div class="zb"><</div>
+	<div class="yb">></div>
+</div>
+	
+</body>
+</html>
