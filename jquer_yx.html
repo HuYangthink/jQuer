@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+<script>
+window.onload = function(){
+$("#address").focus(function(){
+    var txt_value = $(this).val();
+    if (txt_value == "请输入邮箱地址"){
+        $(this).val("");
+
+    }
+    // else if (txt_value ==""){
+    //     $(this).val("请输入邮箱地址")
+    // }
+})
+
+
+$("#address").blur(function () {
+    var txt_value = $(this).val();
+    if (txt_value== ""){
+        $(this).val("请输入邮箱地址");
+    }
+})
+
+    $("#password").focus(function () {
+        var txt_value = $(this).val();
+        if (txt_value == "请输入邮箱密码"){
+            $(this).val("");
+        }
+    })
+
+    $("#password").blur(function(){
+        var ss = $(this).val();
+        if (ss == ""){
+            $(this).val("请输入邮箱密码")
+        }
+    })
+
+    $("#password").focus(function(){
+
+    })
+
+    $("#name").click(function(){
+        
+        open("www.baidu.com")
+    })
+ }
+</script>
+<body>
+<input type="text" id="address" value="请输入邮箱地址" style="color: #ccc;">
+<input type="text" id="password" value="请输入邮箱密码" style="color: #ccc;" >
+<input type="button" id="name" value="登录">
+</body>
+</html>
