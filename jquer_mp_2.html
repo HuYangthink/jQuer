@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+	<script src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#sub").bind("click",function(event){
+				var username = $("#username").val();
+				if (username == "") {
+					$("#msg").html("<p>文本框的值不能为空</p>")
+					// event.perventDefault();
+				}
+			});
+		})
+	</script>
+<body>
+<form>
+	用户名: <input type="text" name="" id="username">
+	<input type="submit" name="" value="提交" id="sub">
+</form>
+<div id="msg"></div>
+</body>
+</html>
