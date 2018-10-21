@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+      <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.js"></script>
+    <style media="screen">
+      input:focus,textarea:focus{
+        border:1px solid #f00;
+        background: #fcc;
+      }
+      .focus{
+        border: 1px solid #f00;
+        background: #fcc;
+      }
+    </style>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(":input").focus(function(){
+      $(this).addClass("focus");
+    }).blur(function(){
+      $(this).removeClass("focus")
+    })
+  })
+</script>
+
+  </head>
+  <body>
+
+
+    <fieldsrt>
+      <lengend>个人信息</lengend>
+      <div class="">
+        <lable for="username">名称</lable>
+        <input type="text" id:"username">
+
+      </div>
+      <div class="">
+        <label for="pass">密码：</label>
+        <input type="text" id="pass">
+      </div>
+
+      <div class="">
+        <label for="msg">详细信息:</label>
+        <textarea name="" id="msg" cols="30" rows="10"></textarea>
+      </div>
+    </fieldsrt>
+  </body>
+</html>

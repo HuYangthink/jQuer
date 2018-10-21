@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  </head>
+      <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.js"></script>
+      <script type="text/javascript">
+          $(document).ready(function(){
+              $("#CheckedAll").click(function(){
+                $('[name=itmes]:checkbox').attr('checked',true);
+              });
+
+              $("#checkedNo").click(function(){
+                $("[name=itmes]:checkbox").attr('checked',false);
+              });
+
+              $("#CheckedRev").click(function(){
+                $('[name=itmes]:checkbox').each(function(){
+                  //$(this).attr('checked',!$(this).attr('checked'));
+                  this.checked = ! this.checked;
+                });
+              });
+
+              $('#send').click(function(){
+                var str = "你选中的是：\r\n";
+                $('[name=itmes]:checkbox:checked').each(function(){
+                  str += $(this).val()+"\r\n";
+                });
+                alert(str);
+              })
+          })
+
+
+      </script>
+  <body>
+
+<from>
+  你的爱好是？
+  <br>
+  <input type="checkbox" name="itmes" value="足球">足球
+  <input type="checkbox" name="itmes" value="篮球">篮球
+  <input type="checkbox" name="itmes" value="游泳">游泳
+  <input type="checkbox" name="itmes" value="乒乓球">乒乓球
+  <input type="button" name="" value="全选" id="CheckedAll">
+  <input type="button" name="" value="全不选" id="checkedNo">
+  <input type="button" name="" value="反选" id="CheckedRev">
+  <input type="button" id="send" value="提 交">
+</from>
+  </body>
+</html>

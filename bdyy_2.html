@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+      <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.js"></script>
+
+  </head>
+  <body>
+<form class="" action="index.html" method="post">
+    <div class="msg">
+        <div class="msg_caption">
+            <span class="bigger">放大</span>
+            <span class="smaller">缩小</span>
+        </div>
+        <div class="">
+            <textarea name="name" rows="8" cols="80" id="comment">
+              多行文本框该渡边，多行文本框高度变化。多行文本高度变化，多行文本框高度变化多行文本框高度变化。 多行文本框高度变化，多行文本框导读变化，多行文本框高度变化
+sad asd sa d as das da dqwdq大是大的As大爱上多钱啊服务人工费未通过 范玮琪，空间就恢复咖啡壶撒个疯狂发UK韦尔股份高科技安徽省给大家看花洒管大数据库和都很大爱老公的考拉就算是打开垃圾书规划的空间好少gd阿萨德刚回家加深对哈萨克回单卡技术的款式厚度卡施工队康达奥克斯阿卡僵尸国度卡萨看时代光华卡视角
+撒打算爱上大是大发黄是奥迪暗红色的进口货物恩爱不是打卡上班考试不打卡回答我好胡大龄剩女材料科学弄撒活动秒回  奥数的卡实践活动拉屎到是到室内空间的不能考试的拉屎大理石会拉开始好了卡萨
+            </textarea>
+        </div>
+    </div>
+</form>
+
+<script type="text/javascript">
+  // $(function(){
+  //   var $comment = $('#comment');
+  //   $('.bigger').click(function(){
+  //     if ($comment.height() <500) {
+  //       $comment.height($comment.height() + 50);
+  //     }
+  //   });
+  //   $('.smaller').click(function(){
+  //     if ($comment.height() > 50) {
+  //       $comment.height($comment.height()-50);
+  //     }
+  //   });
+  // });
+  $(function(){
+    var $comment = $("#comment");
+    $(".bigger").click(function(){
+      if (!$comment.is(":animated")) {
+        if ($comment.height() < 500 ) {
+          $comment.animate({height : "+=50"},400);
+        }
+      }
+    })
+    $(".smaller").click(function(){
+      if (!$comment.is(":animated")) {
+        if ($comment.height() > 50) {
+          $comment.animate({height : "-=50"} , 400);
+        }
+      }
+    })
+  })
+</script>
+  </body>
+</html>
