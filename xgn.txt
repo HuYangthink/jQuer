@@ -1,0 +1,31 @@
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $('#ycz').click(function(){
+          $('#yc').slideUp();
+          $('#xsz').css({
+            'display' : "block"
+          });
+          $("#ycz").css({
+            'display' : 'none'
+          });
+          $(".layui-body").css({
+            "left" : '0'
+          });
+
+        });
+
+        $('#xsz').click(function(){
+          $("#yc").slideDown();
+
+          $("#xsz").css({
+            "display" : "none"
+          });
+          $("#ycz").css({
+            'display' : 'block'
+          });
+          $('.layui-body').css({
+            "left" : "200px"
+          });
+        });
+    })
+  </script>
