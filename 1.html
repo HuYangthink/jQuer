@@ -1,43 +1,70 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<html>
+<html lang="en">
 <head>
-	<title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
 </head>
-<style type="text/css">
-
-</style>
+<script src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+<style>
+     .outBox{width:1000px;height:400px;overflow: hidden;margin:0 auto;border:1px solid #419BF9;position:relative;background-color: #2B2F33;color:#ffffff;border-radius:4px;}
+     .ulPmd{width:9400px;height:400px;position:absolute;left:0;top:0}
+     .ulPmd li{width:700;height:400px;float:left;list-style: none;margin-left:20px;line-height:8px}
+     .ulPmd img{width:100%; height:100%; }
+ </style>
 <body>
-<!-- <div id="acc" >
-<div  :class="[test1,test2]">你好嘛？</div>
-</div> -->
-<div id="app-2">
-	<p>{{message}}</p>
-	<button v-on:click="remeg">转变</button>
-</div>
+<div class="outBox">
+  <ul class="ulPmd">
+    <li><img src="../jQuer_lx/img/1.jpg" alt=""></li>
+    <li><img src="../jQuer_lx/img/2.jpg" alt=""></li>
+    <li><img src="../jQuer_lx/img/3.jpg" alt=""></li>
+    <li><img src="../jQuer_lx/img/a.jpg" alt=""> </li>
+    <li><img src="../jQuer_lx/img/tc1.jpg" alt=""></li>
+    <li><img src="../jQuer_lx/img/tc2.jpg" alt=""></li>
+    <li><img src="../jQuer_lx/img/tc3.jpg" alt=""></li>
+    <li><img src="../jQuer_lx/img/tc4.jpg" alt=""></li>
+    <li><img src="../jQuer_lx/img/tc5.jpg" alt=""></li>
+    <li><img src="../jQuer_lx/img/tc6.jpg" alt=""></li>
+    <li><img src="../jQuer_lx/img/pkq.gif" alt=""></li>
+    <li><img src="../jQuer_lx/img/tc8.png" alt=""></li>
+  </ul>
 
-<!-- <div id="bbb">{{waaa}}</div> -->
-<script type="text/javascript" src="https://unpkg.com/vue"></script>
-<script type="text/javascript">
-	// new Vue({
-	// 	el :'#acc',
-	// 	data :{
-	// 		test1:{
-	// 			color:'red'
-	// 			}
-	// 	}
-	// })
-	var app2 = new Vue({
-		el:'#app-2',
-		data:{
-			message:'Hello Vue.js!'
-		},
-		methods:{
-			remeg : function (){
-				this.message = this.message.split('').reverse().join('')
-			}
-		}
-	})
-</script>
+  <script>
+    $(function(){
+      var i = 0;
+      var timer;
+      timer = setInterval(function(){
+        //根据ul来位移判断向左移动的距离
+        if (i>$('li').length) {
+          i=1.1;
+          //如果i的值来改变整体li元素的位置
+        } else {
+          i++;
+        }
+
+        var ulLeft=-($('li').width())*i;
+        $('.ulPmd').css('left',ulLeft)
+      },100);
+
+          //鼠标移动到li上面时清除定时器
+      $('li').on('mouseover',function(){
+        clearInterval(timer)
+      });
+      //鼠标移除时 继续定时器
+      $('li').on('mouseout',function(){
+        timer = setInterval(function(){
+              if (i>$('li').length) {
+                i=1;
+              } else {
+                i++;
+              }
+              var ulLeft=-($("li").width())*i;
+              $('.ulPmd').css('left',ulLeft)
+        },100);
+      })
+    })
+  </script>
+</div>
 </body>
 </html>
