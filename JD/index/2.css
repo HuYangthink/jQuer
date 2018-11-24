@@ -1,0 +1,20 @@
+#ynzc a {
+  text-decoration: none; color: #808080;
+}
+#ynzc {
+  height: 460px; width:180px; border: 1px solid #000;
+}
+.ynzc_t{height: 100px; width: 100px;border: 1px solid #000; margin-left: 40px;border-radius: 50%;padding: 0;margin-top: 0;}
+.ynzc_t img{height: 100%; width: 100%;border-radius: 50%;}
+.ynzc_id{text-align: center;}
+.ynzc_dlzc{text-align: center;}
+#hyfl{height: 30px; width: 100%;border: 1px solid #000;font-size: 14px;}
+.xrfl{height: 30px; width: 5%;position:absolute;border: 1px solid #000;margin: 0;padding: 0;text-align: center;line-height:30px; border-radius: 50%; color:red;background-color:#fffef9; font-weight: bold;}
+.hy{height: 30px; width: 5%; border: 1px solid #000;position: absolute;margin: 0;padding: 0; margin-left: 6%;text-align:center;line-height: 30px; border-radius: 50%; color: #fdb933; background: #130c0e;}
+.ggl{height: 40px; width: 100%; border: 1px solid #000; margin: 0;padding: 0;font-size: 14px;}
+#cx{line-height: 40px; }
+#gg{margin-left: 5%;}
+#gd{margin-left: 30%;}
+#ynzc .ycts1{font-size: 12px;position: absolute;height: 80px; width: 11%;border: 1px solid #000; margin: 0; padding: 0;display: block;}
+#ynzc .ycts2{font-size: 12px;position: absolute;height: 80px; width: 11%;border: 1px solid #000; margin: 0; padding: 0;display: none;}
+#ynzc .ycts1 span{text-align: center;}

@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>我的京东测试</title>
+	<link rel="stylesheet" type="text/css" href="../../lx/JD/wdjd.css">
+<script type="text/javascript" src="../../lx/JD/wdjd.js"></script>
+<!-- <script type="text/javascript">
+	window.onload=function(){
+
+
+}
+
+	}
+</script> -->
+<script src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+
+</head>
+<body>
+<div class="db">
+	<div class="qdl"> <a href="">请登录</a> </div>
+	<div class="mfzc"><a href="">免费注册</a> </div>
+	<div class="wddd"> <a href="">我的订单</a></div>
+	<div class="wdjd" id="wdjd"><a href="">我的京东</a></div>
+	<div class="jdhy"><a href="">京东会员</a></div>
+	<div class="qycg" id="qycg"><a href="">企业采购</a></div>
+	<div class="kefw" id="kffw"><a href="">客服服务</a></div>
+	<div class="wzdh" id="wzdh"><a href="">网站导航</a></div>
+	<div class="sjjd"><a href="">手机京东</a></div>
+</div>
+
+<!-- 隐藏 -->
+
+<div class="yc1" id="yc1" >
+	<div class="cldd"> <a href="">待处理订单</a></div>
+	<div class="xx"><a href="">消息</a></div>
+	<div class="fxthh"><a href="">返修退换货</a></div>
+	<div class="wdhd"><a href="">我的回答</a></div>
+	<div class="jjsp"><a href="">降价商品</a></div>
+	<div class="wdgz"><a href="">我的关注</a></div>
+
+	<div class="wdjdd"><a href="">我的京豆</a></div>
+	<div class="wdyhj"><a href="">我的优惠券</a></div>
+	<div class="wdbt"><a href="">我的白条</a></div>
+	<div class="wdjc"><a href="">我的理财</a></div>
+</div>
+<!-- 隐藏 企业购物 -->
+<div class="qygw" id="qy">
+	<div class="qyg"><a href="">企业购</a></div>
+	<div class="sycjg"><a href="">商用场景馆</a></div>
+	<div class="gyp"><a href="">工业品</a></div>
+	<div class="lpk"><a href="">礼品卡</a> </div>
+</div>
+<!-- 客服服务 -->
+<div class="fkkw" id="fkw">
+	<div class="kfs">
+		<div class="kh">客户</div>
+		<div class="bzzx"><a href="">帮助中心</a></div>
+		<div class="shfw"><a href="">售后服务</a> </div>
+		<div class="zxkf"><a href="">在线客服</a></div>
+		<div class="yjjy"><a href="">意见建议</a></div>
+		<div class="dhkf"><a href="">电话客服</a></div>
+		<div class="fkjr"><a href="">客服邮箱</a></div>
+		<div class="jrzx"><a href="">金融咨询</a></div>
+		<div class="qqskf"><a href="">全球售客服</a></div>
+	</div>
+
+	<div class="kfx">
+		<div class="sh">商户</div>
+		<div class="hzzs"><a href="">合作招商</a></div>
+		<div class="xxzx"><a href="">学习中心</a></div>
+		<div class="sjht"><a href="">商家后台</a></div>
+		<div class="jmgzt"><a href="">京麦工作台</a></div>
+		<div class="sjbz"><a href="">商家帮助</a></div>
+		<div class="gzpt"><a href="">规则平台</a></div>
+	</div>
+
+</div>
+<!-- 网站导航 -->
+<div class="wzdhyc" id="wzdhyc">
+	<div class="tsez">
+		<div class="tszt1">特色主题</div>
+		<div class="jdsy"><a href="">京东试用</a></div>
+		<div class="jdjr"><a href="">京东金融</a></div>
+		<div class="qqs"><a href="">全球售</a></div>
+		<div class="gjz"><a href="">国际站</a></div>
+
+		<div class="jdhy1"><a href=""> 京东会员</a></div>
+		<div class="jdys"><a href="">京东预售</a></div>
+		<div class="msm"><a href="">买什么</a></div>
+		<div class="eyz"><a href="">俄语站</a></div>
+
+		<div class="zjds"><a href="">装机大师</a></div>
+		<div class="oycs"><a href="">0元评测</a></div>
+		<div class="dqs"><a href="">定期送</a></div>
+		<div class="gas"><a href="">港澳售</a></div>
+
+		<div class="yhj"><a href="">优惠券</a></div>
+		<div class="ms"><a href="">秒杀</a></div>
+		<div class="sg"><a href="">闪购</a></div>
+		<div class="ynz"><a href="">印尼站</a></div>
+
+		<div class="jdjrkj"><a href="">京东金融科技</a></div>
+		<div class="htj"><a href="">ln货推荐</a></div>
+		<div class="pbjh"><a href="">陪伴计划</a></div>
+		<div class="chzs"><a href="">出海招商</a></div>
+
+
+	</div>
+
+	<div class="hypd">
+		<div class="hypd1">行业频道</div>
+		<div class="sj"><a href="">手机</a></div>
+		<div class="znsm"><a href="">智能数码</a></div>
+		<div class="w3c"><a href="">玩3C</a></div>
+
+		<div class="dnbg"><a href="">电脑办公</a></div>
+		<div class="jydq"><a href="">家用电器</a></div>
+		<div class="jdzn"><a href="">京东智能</a></div>
+
+		<div class="fzc"><a href="">服装城</a></div>
+		<div class="jdsx"><a href="">京东生鲜</a></div>
+		<div class="jzc"><a href="">家装城</a></div>
+
+		<div class="my"><a href="">母婴</a></div>
+		<div class="sp"><a href="">食品</a></div>
+		<div class="nzpd"><a href="">农资频道</a></div>
+
+		<div class="zc"><a href="">整车</a></div>
+		<div class="ts"><a href="">图书</a></div>
+		<div class="jdwqj"><a href="">京东元器件</a></div>
+	</div>
+
+	<div class="shfw1">
+		<div class="shfw2">生活服务</div>
+
+		<div class="jdzc"><a href="">京东众筹</a></div>
+		<div class="bt"><a href="">白条</a></div>
+		<div class="jdjr1"><a href="">京东金融APP</a></div>
+
+		<div class="jdxjr"><a href="">京东小金库</a></div>
+		<div class="lc"><a href="">理财</a></div>
+		<div class="znjd"><a href="">智能家电</a></div>
+
+		<div class="dh"><a href="">话费</a></div>
+		<div class="sdh"><a href="">水电煤</a></div>
+		<div class="cp"><a href="">彩票</a></div>
+
+		<div class="nx"><a href="">旅行</a></div>
+		<div class="jpjd"><a href="">机票酒店</a></div>
+		<div class="dyp"><a href="">电影票</a></div>
+
+		<div class="jddj"><a href="">京东到家</a></div>
+		<div class="yx"><a href="">游戏</a></div>
+
+
+	</div>
+	<div class="gdjc">
+		<div class="gdjc1">更多精选</div>
+		<div class="hzzs1"><a href="">合作招商</a></div>
+		<div class="jdtx"><a href="">京东通信</a></div>
+		<div class="jdek"><a href="">京东E卡</a></div>
+
+		<div class="qycg1"><a href="">企业采购</a></div>
+		<div class="fwsc"><a href="">服务市场</a></div>
+		<div class="bgshg"><a href="">办公生活馆</a></div>
+
+		<div class="xczm"><a href="">乡村招募</a></div>
+		<div class="xyjm"><a href="">校园加盟</a></div>
+		<div class="jyb"><a href="">京友邦</a></div>
+
+		<div class="jdsq"><a href="">京东社区</a></div>
+		<div class="yxsq"><a href="">游戏社区</a></div>
+		<div class="zscqwq"><a href="">知识产权维权</a></div>
+	</div>
+</div>
+
+
+<!-- impute 框 -->
+<input type="text" class="ssk"  id="jjd" placeholder="搜索一下" >
+
+<div class="tishi">
+	<a href="" ><p class="ts_a">vivo</p></a>
+	<a href="" ><p class="ts_b">家电献礼</p></a>
+	<a href=""><p  class="ts_c">每150-50</p></a>
+	<a href=""><p  class="ts_d">家电5折</p></a>
+	<a href=""><p  class="ts_e">黑五盛典</p></a>
+	<a href=""><p  class="ts_f">买一赠一</p></a>
+
+</div>
+
+	<!-- 上部提示栏 -->
+	<div id="zdh">
+		<a href="#">
+				<p class="zdh_a">秒杀</p>
+			</a>
+			<a href="">
+				<p class="zdh_b">优惠券</p>
+			</a>
+			<a href="">
+				<p class="zdh_c">PLUS会员</p>
+			</a>
+			<a href="">
+				<p class="zdh_d">闪购</p>
+			</a>
+			<a href="">
+				<p class="zdh_e">拍卖</p>
+			</a>
+			<a href="">
+				<p class="zdh_f">京东时尚</p>
+			</a>
+			<a href="">
+				<p class="zdh_g">京东超市</p>
+			</a>
+			<a href="">
+				<p class="zdh_h">京东生鲜</p>
+			</a>
+			<a href="">
+				<p class="zdh_i">海囤全球</p>
+			</a>
+			<a href="">
+				<p class="zdh_j">京东金融</p>
+			</a>
+	</div>
+<!-- 放大镜 -->
+<div class="fdj">
+	<a href="#"><img src="../../lx/JD/img/fdj.png" alt=""></a>
+</div>
+<!-- 图标 -->
+<div class="log">
+	<img src="../../lx/JD/img/jd.png" alt="">
+</div>
+
+<div id="yst">
+	<p class="yt_a"><img src="../../lx/JD/img/2.jpg" alt=""></p>
+	<p class="yt_b"><img src="../../lx/JD/img/2.jpg" alt=""></p>
+	<p class="yt_c"><img src="../../lx/JD/img/2.jpg" alt=""></p>
+</div>
+
+<div id="wrapper">
+<div id="show-area">
+	<ul >
+		<li><img style="height:100%;width:100%;" src="../../lx/JD/img/1.jpg" alt=""></li>
+		<li><img src="../../lx/JD/img/2.jpg" alt=""></li>
+		<li><img src="../../lx/JD/img/3.jpg" alt=""></li>
+		<li><img src="../../lx/JD/img/a.jpg" alt=""> </li>
+		<li><img src="../../lx/JD/img/tc1.jpg" alt=""></li>
+		<li><img src="../../lx/JD/img/tc2.jpg" alt=""></li>
+		<li><img src="../../lx/JD/img/tc3.jpg" alt=""></li>
+		<li><img style="height:100%;width:100%;" src="../../lx/JD/img/tc4.jpg" alt=""></li>
+
+	</ul>
+
+		<div id="button-left" title="上一张"></div>
+		<div id="button-right" title="下一位"></div>
+
+		<div id="indicator"></div>
+</div>
+</div>
+
+<div id="ybyr"></div>
+
+<!-- 横行模块 -->
+<div class="box">
+<div class="jydqq" id="jydq"><a href="">家用电器</a></div>
+<div id="sjyyssm"><a href="">手机/运营商/数码</a></div>
+<div id="dnbg"><a href="">电脑/办公</a></div>
+<div id="jjjjjzcj"><a href="">家居/家具/家装/厨具</a></div>
+<div id="nznztzny"> <a href="">男装/女装/童装/内衣</a></div>
+<div id="mz"><a href="">美妆/个护清洁/宠物</a></div>
+<div id="nx"><a href="">女鞋/箱包/钟表/珠宝</a></div>
+<div id="nxhw"><a href="">男鞋/运动/户外</a></div>
+<div id="fcqc"><a href="">房产/汽车/汽车用具</a></div>
+<div id="mywj"><a href="">母婴/玩具乐器</a></div>
+<div id="spjl"><a href="">食品/酒类/生鲜/特产</a></div>
+<div id="yslp" 	><a href="">艺术/礼品鲜花/农资绿植</a></div>
+<div id="ylbj"><a href="">医药保健/计生情趣</a></div>
+<div id="tsyx"><a href="">图书/音像/电子书</a></div>
+<div id="jpjd"><a href="">机票/酒店/旅游/生活</a></div>
+<div id="lczc"><a href="">理财/众筹/白条/保险</a></div>
+<div class="azwx"><a href="">安装/维修/清洗保养</a></div>
+</div>
+<!-- 家用电器隐藏 -->
+<div class="jydqyc" id="dqyc">
+	<div class="ydg">
+		<div class="jdg"><a href="">家电馆   ></a></div>
+		<div class="xzzmd"><a href="">乡镇专卖店   ></a></div>
+		<div class="jdfw"><a href="">家电服务   ></a></div>
+		<div class="jdqyg"><a href="">家电企业购   ></a></div>
+		<div class="sydq"><a href="">商用电器   ></a></div>
+	</div>
+	<div class="ds">
+		<div class="ds1"><a href="">电视 ></a> </div>
+		<div class="qmds"><a href="">曲面电视></a></div>
+		<div class="cbds"><a href="">超薄电视></a></div>
+		<div class="hds"><a href="">HDR电视</a></div>
+		<div class="kds"><a href="">4K超清电视</a></div>
+		<div class="rgznds"><a href="">人工智能电视</a></div>
+		<div class="yc55"><a href="">55英寸</a></div>
+		<div class="yc65"><a href="">65英寸</a></div>
+		<div class="dspj"><a href="">电视配件</a></div>
+		<div class="oledds"><a href="">OLED电视</a></div>
+
+	</div>
+<div class="kt">
+	<div class="kt1"><a href="">空调  ></a></div>
+	<div class="bgskt"><a href="">壁挂式空调</a></div>
+	<div class="zykt"><a href="">中央空调</a></div>
+	<div class="gskt"><a href="">柜式空调</a></div>
+	<div class="yjnxkt"><a href="">一级能效空调</a></div>
+	<div class="bpkt"><a href="">变频空调</a></div>
+	<div class="dkt"><a href="">1.5匹空调</a></div>
+	<div class="dlkt"><a href="">单冷空调</a></div>
+	<div class="yjhx"><a href="">以旧换新</a></div>
+	</div>
+	<div class="xyj">
+	<div class="xyj1"><a href="">洗衣机></a></div>
+	<div class="gtxyj"><a href="">滚筒洗衣机</a></div>
+	<div class="xhytj"><a href="">洗烘一体机</a></div>
+	<div class="lbxyj"><a href="">波轮洗衣机</a></div>
+	<div class="mnxyj"><a href="">迷你洗衣机</a></div>
+	<div class="hgj"><a href="">烘干机</a></div>
+	<div class="xyjpj"><a href="">洗衣机配件</a></div>
+</div>
+
+	<div class="bx">
+		<div class="bx1"><a href="">冰箱></a></div>
+		<div class="dm"><a href="">多门</a></div>
+		<div class="dkm"><a href=""> 对开门</a></div>
+		<div class="sm"><a href="">三门</a></div>
+		<div class="sum"><a href="">双门</a></div>
+		<div class="lg"><a href="">冷柜/冰吧</a></div>
+		<div class="jg"><a href="">酒柜</a></div>
+		<div class="bxpj"><a href="">冰箱配件</a></div>
+	</div>
+
+	<div class="fwdd">
+		<div class="cwds"><a href="">厨卫大电></a></div>
+		<div class="yyj"><a href="">油烟机</a></div>
+		<div class="rqz"><a href="">燃气灶</a></div>
+		<div class="yztc"><a href="">烟灶套餐</a></div>
+		<div class="jcz"><a href="">集成灶</a></div>
+		<div class="xdg"><a href="">消毒柜</a></div>
+		<div class="xwj"><a href="">洗碗机</a></div>
+		<div class="drsq"><a href="">电热水器</a></div>
+		<div class="rqrsq"><a href="">燃气热水器</a></div>
+		<div class="xrscd"><a href="">嵌入式厨电</a></div>
+		<div class="sycfdq"><a href="">商用厨房电器</a></div>
+
+	</div>
+
+	<div class="cfxd">
+		<div class="cfxd1"><a href="">厨房小电></a></div>
+		<div class="pbj"><a href="">破壁机</a></div>
+		<div class="dkx"><a href="">电烤箱</a></div>
+		<div class="dfb"><a href="">电饭煲</a></div>
+		<div class="dylg"><a href="">电压力锅</a></div>
+		<div class="kfj"><a href="">咖啡机</a></div>
+		<div class="djj"><a href="">豆浆机</a></div>
+		<div class="llj"><a href="">料理机</a></div>
+		<div class="ddg"><a href="">电炖锅</a></div>
+		<div class="dbd"><a href="">电饼铛</a></div>
+		<div class="dytg"><a href="">多用途锅</a></div>
+		<div class="dsh"><a href="">电水壶、热水器</a></div>
+		<div class="wbl"><a href="">微波炉</a></div>
+		<div class="zzj"><a href="">榨汁机/原汁机</a></div>
+		<div class="ysh"><a href="">养生壶</a></div>
+		<div class="dcl"><a href="">电磁炉</a></div>
+		<div class="mbj"><a href="">面包机</a></div>
+		<div class="kqzg"><a href="">空气炸锅</a></div>
+		<div class="mtj"><a href="">面条机</a></div>
+		<div class="dtl"><a href="">电陶炉</a></div>
+		<div class="zdj"><a href="">煮蛋机</a></div>
+		<div class="dskl"><a href="">电烧烤炉</a></div>
+	</div>
+
+	<div class="shdq">
+		<div class="shdq1"><a href="">生活电器></a></div>
+		<div class="xcq"><a href="">吸尘器/除螨仪</a></div>
+		<div class="kqjhq"><a href="">空气净化器</a></div>
+		<div class="dfs"><a href="">电风扇</a></div>
+		<div class="sdjqr"><a href="">扫地机器人</a></div>
+		<div class="zqtb"><a href="">蒸汽拖把/拖地机</a></div>
+		<div class="gyj"><a href="">干衣机</a></div>
+		<div class="dhj"><a href="">电话机</a></div>
+		<div class="ysj"><a href="">饮水机</a></div>
+		<div class="jsq"><a href="">净水器</a></div>
+		<div class="csq"><a href="">除湿机</a></div>
+		<div class="gtj"><a href="">挂烫机/熨斗</a></div>
+		<div class="jsq1"><a href="">加湿器</a></div>
+		<div class="nfs"><a href="">冷风扇</a></div>
+		<div class="mqxjq"><a href="">毛球修剪器</a></div>
+		<div class="shdqp"><a href="">生活电器配件</a></div>
+	</div>
+
+	<div class="ghjk">
+		<div class="ghjk1"><a href="">个户健康></a></div>
+		<div class="txd"><a href="">剃须刀</a></div>
+		<div class="ddys"><a href="">电动牙刷</a></div>
+		<div class="dcf"><a href="">电吹风</a></div>
+		<div class="amq"><a href="">按摩器</a></div>
+		<div class="jkc"><a href="">健康秤</a></div>
+		<div class="zfq"><a href="">卷/直发器</a></div>
+		<div class="tfq"><a href="">剃/脱毛器</a></div>
+		<div class="lfq"><a href="">理发器</a></div>
+		<div class="zyp"><a href="">足浴盆</a></div>
+		<div class="zlj"><a href="">足疗机</a></div>
+		<div class="mrq"><a href="">美容器</a></div>
+		<div class="jmy"><a href="">洁面仪</a></div>
+		<div class="amy"><a href="">按摩椅</a></div>
+	</div>
+	<div class="jtyy">
+		<div class="jtyy1"><a href="">家庭影音></a></div>
+		<div class="jtyy2"><a href="">家庭影院</a></div>
+		<div class="mnyx"><a href="">迷你音响</a></div>
+		<div class="dvd"><a href="">DVD</a></div>
+		<div class="gf"><a href="">功放</a></div>
+		<div class="hyb"><a href="">回音壁</a></div>
+		<div class="yypj"><a href="">影音配件</a></div>
+	</div>
+	<div class="jkdq">
+	<div class="jkdq1"><a href="">进口电器</a></div>
+	<div class="jkdq2"><a href="">进口电器</a></div>
+	</div>
+</div>
+<!-- 手机/运营商/数码 -->
+<div class="sjyysm" id="sjyy">
+	<div class="sjdy">
+	<div class="w3c1"><a href="">玩3c   ></a></div>
+	<div class="sjpd"><a href="">手机频道   ></a></div>
+	<div class="wsyyt"><a href="">网上营业厅   ></a></div>
+	<div class="pjxgzx"><a href="">配件选购中心   ></a></div>
+	<div class="yjhx1"><a href="">以旧换新   ></a></div>
+	</div>
+	<div class="sjtx">
+		<div class="sjtx1"><a href="">手机通信   ></a></div>
+		<div class="sj1"><a href="">手机</a></div>
+		<div class="yxsj"><a href="">游戏手机</a></div>
+		<div class="lrj"><a href="">老人机</a></div>
+		<div class="djj1"><a href="">对讲机</a></div>
+		<div class="yjhx2"><a href="">以旧换新</a></div>
+		<div class="sjwx"><a href="">手机维修</a></div>
+
+	</div>
+
+	<div class="yys">
+		<div class="yys1"><a href="">运营商   ></a></div>
+		<div class="hyj"><a href="">合约机</a></div>
+		<div class="xhm"><a href="">选号码</a></div>
+		<div class="ghkd"><a href="">固话宽带</a></div>
+		<div class="btc0"><a href="">办套餐</a></div>
+		<div class="chf"><a href="">充话费/流量</a></div>
+		<div class="zgdx"><a href="">中国电信</a></div>
+		<div class="zgyd"><a href="">中国移动</a></div>
+		<div class="zglt"><a href="">中国联通</a></div>
+		<div class="jdtx1"><a href="">京东通信</a></div>
+		<div class="xh170"><a href="">170选号</a></div>
+	</div>
+	<div class="sjpj">
+		<div class="sjpj1"><a href="">手机配件   ></a></div>
+		<div class="sjk"><a href="">手机壳</a></div>
+		<div class="tm"><a href="">贴膜</a></div>
+		<div class="sjcck"><a href="">手机存储卡</a></div>
+		<div class="sjx"><a href="">数据线</a></div>
+		<div class="cdq"><a href="">充电器</a></div>
+		<div class="wxcdq"><a href="">无线充电器</a></div>
+		<div class="sjej"><a href="">手机耳机</a></div>
+		<div class="cypj"><a href="">创意配件</a></div>
+		<div class="sjsp"><a href="">手机饰品</a></div>
+		<div class="sjdc"><a href="">手机电池</a></div>
+		<div class="pgzb"><a href="">苹果周边</a></div>
+		<div class="yddy"><a href="">移动电源</a></div>
+		<div class="lyej"><a href="">蓝牙耳机</a></div>
+		<div class="sjzj"><a href="">手机支架</a></div>
+		<div class="czpj"><a href="">车载配件</a></div>
+		<div class="pzpj"><a href="">拍照配件</a></div>
+
+	</div>
+	<div class="sysx">
+		<div class="sysx1"><a href="">摄影摄像</a></div>
+		<div class="smxj"><a href="">数码相机</a></div>
+		<div class="df"><a href="">单电/微单相机</a></div>
+		<div class="dfxj"><a href="">单反相机</a></div>
+		<div class="pld"><a href="">拍立得</a></div>
+		<div class="ydxj"><a href="">运动相机</a></div>
+		<div class="sxt"><a href="">摄像头</a></div>
+		<div class="jt"><a href="">镜头</a></div>
+		<div class="hwqc"><a href="">户外器材</a></div>
+		<div class="ypfw"><a href="">影棚器材</a></div>
+		<div class="cyfw"><a href="">冲印服务</a></div>
+		<div class="smxk"><a href="">数码相框</a></div>
+
+	</div>
+	<div class="smpj">
+
+		<div class="smpj1"><a href="">数码配件   ></a></div>
+		<div class="ccb"><a href="">储存卡</a></div>
+		<div class="sjj"><a href="">三脚架/云台</a></div>
+		<div class="xjb"><a href="">相机包</a></div>
+		<div class="lj"><a href="">滤镜</a></div>
+		<div class="sgd"><a href="">闪光灯/手柄</a></div>
+		<div class="xjqj"><a href="">相机清洁/贴膜</a></div>
+		<div class="jsfj"><a href="">机身附件</a></div>
+		<div class="jtfj"><a href="">镜头附件</a></div>
+		<div class="dkq"><a href="">读卡器</a></div>
+		<div class="zj"><a href="">支架</a></div>
+		<div class="dc"><a href="">电池/充电器</a></div>
+	</div>
+	<div class="yyyl">
+		<div class="yyyl1"><a href="">影音娱乐   ></a></div>
+		<div class="ejem"><a href="">耳机/耳麦</a></div>
+		<div class="yx1"><a href="">音箱/音响</a></div>
+		<div class="znyx"><a href="">智能音箱</a></div>
+		<div class="bxx"><a href="">便携/无线音箱</a></div>
+		<div class="syj"><a href="">收音机</a></div>
+		<div class="mkf"><a href="">麦克风</a></div>
+		<div class="mp3"><a href="">MP3/MP4</a></div>
+		<div class="zyyp"><a href="">专业音频</a></div>
+	</div>
+	<div class="znsb2">
+		<div class="znsb1"><a href="">智能设备   ></a></div>
+		<div class="znsh"><a href="">智能手环</a></div>
+		<div class="znsb"><a href="">智能手表</a></div>
+		<div class="znyj"><a href="">智能眼镜</a></div>
+		<div class="znjqr"><a href="">智能机器人</a></div>
+		<div class="ydgzq"><a href="">运动跟踪器</a></div>
+		<div class="jkjc"><a href="">健康监测</a></div>
+		<div class="znps"><a href="">智能配饰</a></div>
+		<div class="znjj"><a href="">智能居家</a></div>
+		<div class="tgc"><a href="">体感车</a></div>
+		<div class="wrj"><a href="">无人机</a></div>
+		<div class="qtpj"><a href="">其他配件</a></div>
+
+	</div>
+	<div class="dzjy">
+		<div class="dzjy1"><a href="">电子教育   ></a></div>
+		<div class="xspb"><a href="">学生平板</a></div>
+		<div class="duj"><a href="">点读机/笔</a></div>
+		<div class="zjyz"><a href="">早教益智</a></div>
+		<div class="yyb"><a href="">录音笔</a></div>
+		<div class="dzs"><a href="">电纸书</a></div>
+		<div class="dzcd"><a href="">电子词典</a></div>
+		<div class="fdj"><a href="">复读机</a></div>
+
+	</div>
+</div>
+
+<!-- 家居 家具 -->
+<div class="juju" id="juju">
+	<div class="jzc1">
+		<div class="jzc2"><a href="">家装城   ></a></div>
+		<div class="jjry"> <a href="">居家日用   ></a></div>
+		<div class="jpjj"><a href="">精品家具   ></a></div>
+		<div class="jzjc"><a href="">家装建材   ></a></div>
+		<div class="gjcj"><a href="">国际厨具   ></a></div>
+		<div class="zxfw"><a href="">装修服务   ></a></div>
+	</div>
+
+	<div class="cj">
+		<div class="cj1"><a href="">厨具  ></a></div>
+		<div class="sjjj"><a href="">水具酒具</a></div>
+		<div class="prgj"><a href="">烹饪锅具</a></div>
+		<div class="cg"><a href="">炒锅</a></div>
+		<div class="cj2"><a href="">餐具</a></div>
+		<div class="cfpj"><a href="">厨房配件</a></div>
+		<div class="jdcb"><a href="">剪刀菜板</a></div>
+		<div class="gjtc2"><a href="">锅具套餐</a></div>
+		<div class="cj3"><a href="">茶具</a></div>
+		<div class="kfj1"><a href="">咖啡具</a></div>
+		<div class="bwb"><a href="">保温杯</a></div>
+		<div class="bxh"><a href="">保鲜盒</a></div>
+
+	</div>
+
+	<div class="jf">
+		<div class="jf1"><a href="">家纺   ></a></div>
+		<div class="cptj"><a href="">床品套件</a></div>
+		<div class="bz"><a href="">被子</a></div>
+		<div class="zx"><a href="">枕芯</a></div>
+		<div class="wz"><a href="">蚊帐</a></div>
+		<div class="lx"><a href="">凉席</a></div>
+		<div class="mjyj"><a href="">毛巾浴巾</a></div>
+		<div class="dtdd"><a href="">地毯地垫</a></div>
+		<div class="cdcr"><a href="">床垫/床褥</a></div>
+		<div class="tz"><a href="">毯子</a></div>
+		<div class="bzkd"><a href="">抱枕靠垫</a></div>
+		<div  class="clcs"><a href="">窗帘/窗纱</a></div>
+		<div class="cdcl"><a href="">床单/床笠</a></div>
+		<div class="bt1"><a href="">被套</a></div>
+		<div class="zjzt"><a href="">枕巾枕套</a></div>
+		<div class="sfdt"><a href="">沙发垫套/椅垫</a></div>
+		<div class="zb"><a href="">桌布/罩件</a></div>
+		<div class="drt"><a href="">电热毯</a></div>
+		<div class="byrs"><a href="">布艺软饰</a></div>
+	</div>
+	<div class="shyp">
+		<div class="shyp1"><a href="">生活日用   ></a></div>
+		<div class="sryp"><a href="">收纳用品</a></div>
+		<div class="ysyj"><a href="">雨伞雨具</a></div>
+		<div class="jhcw"><a href="">净化除味</a></div>
+		<div class="ysyp"><a href="">浴室用品</a></div>
+		<div class="xsyt"><a href="">洗晒/熨烫</a></div>
+		<div class="fr"><a href="">缝纫/纺织用品</a></div>
+		<div class="bnfh"><a href="">保暖防护</a></div>
+		<div class="fjgj"><a href="">清洁工具</a></div>
+	</div>
+
+	<div class="jzrs">
+		<div class="jzrs1"><a href="">家装软饰   ></a></div>
+		<div class="zszh"><a href="">装饰字画</a></div>
+		<div class="zsbj"><a href="">装饰摆件</a></div>
+		<div class="sg1"><a href="">手工/十字绣</a></div>
+		<div class="xh"><a href="">相框/照片墙</a></div>
+		<div class="qt"><a href="">墙贴/装饰贴</a></div>
+		<div class="hphy"><a href="">花瓶花艺</a></div>
+		<div class="xxfh"><a href="">香薰防护</a></div>
+		<div class="jqsp"><a href="">节庆饰品</a></div>
+		<div class="zs"><a href="">钟饰</a></div>
+		<div class="cygd"><a href="">帘艺隔断</a></div>
+		<div class="cyjj"><a href="">创意家居</a></div>
+
+	</div>
+
+	<div class="dj">
+		<div class="dj1"><a href="">灯具   ></a></div>
+		<div class="xdd"><a href="">吸顶灯</a></div>
+		<div class="dd"><a href="">吊灯</a></div>
+		<div class="td"><a href="">台灯</a></div>
+		<div class="tdyd"><a href="">筒灯射灯</a></div>
+		<div class="tyd"><a href="">庭院灯</a></div>
+		<div class="zsd"><a href="">装饰灯</a></div>
+		<div class="dled"><a href="">LED灯</a></div>
+		<div class="fwd"><a href="">氛围灯</a></div>
+		<div class="ldd"><a href="">落地灯</a></div>
+		<div class="yjd"><a href="">应急灯/手灯</a></div>
+		<div class="jnd"><a href="">节能灯</a></div>
+
+	</div>
+
+	 <div class="jj">
+	 	<div class="jj1"><a href="">家具   ></a></div>
+	 	<div class="wsjj"><a href="">卧室家具</a></div>
+	 	<div class="ktjj"><a href="">客厅家具</a></div>
+	 	<div class="ctjj"><a href="">餐厅家具</a></div>
+	 	<div class="sfjj"><a href="">书房家具</a></div>
+	 	<div class="rtjj"><a href="">儿童家具</a></div>
+	 	<div class="cwjj"><a href="">储物家具</a></div>
+	 	<div class="ythw"><a href="">阳台/户外</a></div>
+	 	<div class="bgjj"><a href="">办公家具</a></div>
+	 	<div class="c1"><a href="">床</a></div>
+	 	<div class="cd"><a href="">床垫</a></div>
+	 	<div class="sf"><a href="">沙发</a></div>
+	 	<div class="dny"><a href="">电脑椅</a></div>
+	 	<div class="yg"><a href="">衣柜</a></div>
+	 	<div class="cj5"><a href="">茶几</a></div>
+	 	<div class="dsg"><a href="">电视柜</a></div>
+	 	<div class="cz"><a href="">餐桌</a></div>
+	 	<div class="dnz"><a href="">电脑桌</a></div>
+	 	<div class="xj"><a href="">鞋架/衣帽架</a></div>
+	 	<div class="rtzy"><a href="">儿童桌椅</a></div>
+	 	<div class="rtc"><a href="">儿童床</a></div>
+	 	<div class="lyj"><a href="">晾衣架</a></div>
+
+	 </div>
+
+
+
+	 <div class="qwdz">
+	 	<div class="qwdz1"><a href="">全屋定制   ></a></div>
+	 	<div class="dzyg"><a href="">定制衣柜</a></div>
+	 	<div class="ttm"><a href="">榻榻米</a></div>
+	 	<div class="cg1"><a href="">橱柜</a></div>
+	 	<div class="m"><a href="">门</a></div>
+	 	<div class="c"><a href="">窗</a></div>
+	 	<div class="lyf"><a href="">淋浴房</a></div>
+	 	<div class="gbl"><a href="">壁挂炉</a></div>
+	 	<div class="srq"><a href="">散热器</a></div>
+	 </div>
+
+
+	 <div class="jzcl">
+	 	<div class="jzcl1"><a href="">建筑材料   ></a></div>
+	 	<div class="mb"><a href="">木板/板材</a></div>
+	 	<div class="yqtl"><a href="">油漆涂料</a></div>
+	 	<div class="tsfl"><a href="">涂刷辅料</a></div>
+	 	<div class="gcgj"><a href="">管材管件</a></div>
+	 	<div class="cz1"><a href="">瓷砖</a></div>
+	 	<div class="db1"><a href="">地板</a></div>
+	 	<div class="bz1"><a href="">壁纸</a></div>
+	 </div>
+</div>
+<!-- 第三个 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
