@@ -100,4 +100,134 @@ $('.ycts_h a').mouseover(function(){
 }).mouseout(function(){
   $('.ycts_h a').css('color','#808080');
 });
+
+
+
+// 最下面
+$(".dyp_a").mouseover(function(){
+  $(".dyp_a_2 a").css("color",'red'),
+    $(".dyp_a_1 img").attr('src','../../lx/JD/img/hf1.png')
+}).mouseout(function(){
+  $(".dyp_a_2 a").css('color','#808080'),
+  $('.dyp_a_1 img').attr('src','../../lx/jd/img/hf.png')
+})
+
+$(".dyp_b").mouseover(function(){
+  $(".dyp_b_2 a").css("color",'red'),
+    $(".dyp_b_1 img").attr('src','../../lx/JD/img/jp1.png')
+}).mouseout(function(){
+  $(".dyp_b_2 a").css('color','#808080'),
+  $('.dyp_b_1 img').attr('src','../../lx/jd/img/jp.png')
+})
+
+
+$(".dyp_c").mouseover(function(){
+  $(".dyp_c_2 a").css("color",'red'),
+    $(".dyp_c_1 img").attr('src','../../lx/JD/img/jiudian1.png')
+}).mouseout(function(){
+  $(".dyp_c_2 a").css('color','#808080'),
+  $('.dyp_c_1 img').attr('src','../../lx/jd/img/jiudian.png')
+})
+
+$(".dyp_d").mouseover(function(){
+  $(".dyp_d_2 a").css("color",'red'),
+    $(".dyp_d_1 img").attr('src','../../lx/JD/img/yx1.png')
+}).mouseout(function(){
+  $(".dyp_d_2 a").css('color','#808080'),
+  $('.dyp_d_1 img').attr('src','../../lx/jd/img/yx.png')
+})
+
+$(".drp_a").mouseover(function(){
+  $(".drp_a_2 a").css("color",'red'),
+    $(".drp_a_1 img").attr('src','../../lx/JD/img/qy1.png')
+}).mouseout(function(){
+  $(".drp_a_2 a").css('color','#808080'),
+  $('.drp_a_1 img').attr('src','../../lx/jd/img/qy.png')
+})
+
+
+$(".drp_b").mouseover(function(){
+  $(".drp_b_2 a").css("color",'red'),
+    $(".drp_b_1 img").attr('src','../../lx/JD/img/jyk1.png')
+}).mouseout(function(){
+  $(".drp_b_2 a").css('color','#808080'),
+  $('.drp_b_1 img').attr('src','../../lx/jd/img/jyk.png')
+})
+
+
+$(".drp_c").mouseover(function(){
+  $(".drp_c_2 a").css("color",'red'),
+    $(".drp_c_1 img").attr('src','../../lx/JD/img/dyp1.png')
+}).mouseout(function(){
+  $(".drp_c_2 a").css('color','#808080'),
+  $('.drp_c_1 img').attr('src','../../lx/jd/img/dyp.png')
+})
+
+
+$(".drp_d").mouseover(function(){
+  $(".drp_d_2 a").css("color",'red'),
+    $(".drp_d_1 img").attr('src','../../lx/JD/img/hcp1.png')
+}).mouseout(function(){
+  $(".drp_d_2 a").css('color','#808080'),
+  $('.drp_d_1 img').attr('src','../../lx/JD/img/hcp.png')
+});
+
+
+$(".dsp_a").mouseover(function(){
+  $(".dsp_a_2 a").css("color",'red'),
+    $(".dsp_a_1 img").attr('src','../../lx/JD/img/zc1.png')
+}).mouseout(function(){
+  $(".dsp_a_2 a").css('color','#808080'),
+  $('.dsp_a_1 img').attr('src','../../lx/JD/img/jdzc.png')
+})
+
+
+$(".dsp_b").mouseover(function(){
+  $(".dsp_b_2 a").css("color",'red'),
+    $(".dsp_b_1 img").attr('src','../../lx/JD/img/lc1.png')
+}).mouseout(function(){
+  $(".dsp_b_2 a").css('color','#808080'),
+  $('.dsp_b_1 img').attr('src','../../lx/JD/img/lc.png')
+})
+
+$(".dsp_c").mouseover(function(){
+  $(".dsp_c_2 a").css("color",'red'),
+    $(".dsp_c_1 img").attr('src','../../lx/JD/img/lp1.png')
+}).mouseout(function(){
+  $(".dsp_c_2 a").css('color','#808080'),
+  $('.dsp_c_1 img').attr('src','../../lx/JD/img/lp.png')
+})
+
+
+$(".dhp").mouseover(function(){
+  $(".dhp_a_2 a").css("color",'red'),
+    $(".dhp_a_1 img").attr('src','../../lx/JD/img/bt1.png')
+}).mouseout(function(){
+  $(".dhp_a_2 a").css('color','#808080'),
+  $('.dhp_a_1 img').attr('src','../../lx/JD/img/bt.png')
+})
+
+
+// 底部
+$('.hfcz a').mouseover(function(){
+  $(".hfcz a").css("color",'red'),
+  $(".xmyc").css("display",'block');
+}).mouseout(function(){
+  $('.hfcz a').css('color','#808080'),
+  $(".xmyc").css("display",'none');
+})
+
+
+$('.llcz a').mouseover(function(){
+  $(".llcz a").css('color','red');
+}).mouseout(function(){
+  $(".llcz a").css("color",'#808080');
+})
+
+$(".tcbg a").mouseover(function(){
+  $(".tcbg a").css("color",'red');
+}).mouseout(function(){
+  $(".tcbg a").css('color','#808080');
+})
+
 })
