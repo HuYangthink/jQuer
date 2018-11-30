@@ -211,21 +211,34 @@ $(".dhp").mouseover(function(){
 // 底部
 $('.hfcz a').mouseover(function(){
   $(".hfcz a").css("color",'red'),
-  $(".xmyc").css("display",'block');
+  $(".xmyc").css("display",'block'),
+  $("#llcz").css("display",'none'),
+  $("#tcbg").css('display','none');
 }).mouseout(function(){
-  $('.hfcz a').css('color','#808080'),
-  $(".xmyc").css("display",'none');
+  $('.hfcz a').css('color','#808080');
+  // $(".xmyc").css("display",'none');
 })
+
+
+//
+
 
 
 $('.llcz a').mouseover(function(){
-  $(".llcz a").css('color','red');
+  $(".llcz a").css('color','red'),
+  $(".xmyc").css("display",'none'),
+  $("#llcz").css("display",'block'),
+  $("#tcbg").css('display','none');
 }).mouseout(function(){
   $(".llcz a").css("color",'#808080');
+
 })
 
 $(".tcbg a").mouseover(function(){
-  $(".tcbg a").css("color",'red');
+  $(".tcbg a").css("color",'red'),
+  $(".xmyc").css("display",'none'),
+  $("#llcz").css("display",'none'),
+  $("#tcbg").css('display','block');
 }).mouseout(function(){
   $(".tcbg a").css('color','#808080');
 })

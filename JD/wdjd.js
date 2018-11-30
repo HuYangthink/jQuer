@@ -306,7 +306,7 @@ $(function () {
 		 并且再点击了一次左按钮，这时候我们就利用css的快速转换效果把ul移动第一张图片的位置
 		 并且第二张图片滑入达到无缝效果（css的变换效果很快我们肉眼是很难看见的）*/
 		 if(i==size){
-				 console.log("qq");
+				 // console.log("qq");
 				 $("#show-area ul").css({left:0});
 				 i=1;
 		 }
@@ -326,13 +326,6 @@ $(function () {
 
 
 // ajax
+$('#ybyr').load('../../lx/jd/2.html')
 
-$.ajax({
-	url:../../lx/JD/index/2.html,
-	type:"GET",
-	success:function(data){
-		var result = $(data).find('#ynzc');
-		$("#ybyr").html(result);
-	}
-})
 }

@@ -429,7 +429,7 @@ margin-top: 2px;
 .jkdq2{height: 20px; width: 8%; border-left : 1px solid #ccc; margin-left: 11%; line-height: 20px; margin-top: 5px; text-align: center;}
 
 /*手机运营商/数码*/
-.sjyysm{z-index: 994; background: #fff;font-size:14px; height:600px; width: 60%;  margin-left: 22.7%; /*display: none; */position: absolute;}
+.sjyysm{z-index: 994; background: #fff;font-size:14px; height:600px; width: 60%;  margin-left: 22.7%; display: none; position: absolute;}
 .sjdy{font-size: 14px;color:#fff;height: 30px; width: 100%;}
 
 .sjdy a{ color:#fff; }
@@ -867,8 +867,11 @@ margin-top: 2px;
    #show-area ul li img{
      height: 100%; width: 100%;
    }
-#yst{height: 460px; width: 160px; border: 1px solid #000;position: absolute; margin-left: 62%; margin-top: 20px;}
+#yst{height: 460px; width: 180px; border: 1px solid #000;position: absolute; margin-left: 62%; margin-top: 20px;}
 #yst p{height: 140px;  width: 100%; border: 1px solid #000;}
 #yst p img{height: 100%; width: 100%;}
 .yt_b{margin-top: 16px;}
 .yt_c{margin-top: 16px;}
+
+
+#ybyr{height: 460px; width: 180px; border: 1px solid #000; position: absolute;margin-left: 74%; margin-top: 20px; }
