@@ -326,6 +326,6 @@ $(function () {
 
 
 // ajax
-$('#ybyr').load('../../lx/jd/2.html')
+$('#ybyr').load('../../lx/jd/index/2.html')
 
 }

@@ -23,6 +23,8 @@
 #ynzc .ycts1 span{text-align: center;}
 #xmk{height: 160px; width: 100%; border: 1px solid #000;margin: 0px; padding: 0;}
 #xmk span{display: inline-block;}
+.dyp{position: relative;}
+.dyp a{color: #808080; }
 .dyp_a{height:40px; width:40px; border: 1px solid #000;margin:0;padding:0; position:absolute; font-size: 8px;margin-left: 5px; margin-top: 10px;}
 .dyp_a_1{height: 20px; width:20px; border:1px solid #000;margin-left: 10px;}
 .dyp_a_1 img{height: 100%; width: 100%;}
@@ -48,7 +50,7 @@
 
 
 /* 第二排 */
-
+.drp a{color: #808080;}
 .drp_a{height:40px; width:40px; border: 1px solid #000;margin:0;padding:0; position:absolute; font-size: 8px; margin-left: 3px; margin-top: 60px;}
 .drp_a_1{height: 20px; width:20px; border:1px solid #000;margin-left: 10px;}
 .drp_a_1 img{height: 100%; width: 100%;}
@@ -74,7 +76,7 @@
 
 
 /* 第三排 */
-
+.dsp a{color: #808080;}
 .dsp_a{height:40px; width:40px; border: 1px solid #000;margin:0;padding:0; position:absolute; font-size: 8px; margin-left: 3px; margin-top: 110px;}
 .dsp_a_1{height: 20px; width:20px; border:1px solid #000;margin-left: 10px;}
 .dsp_a_1 img{height: 100%; width: 100%;}

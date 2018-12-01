@@ -241,6 +241,15 @@ $(".tcbg a").mouseover(function(){
   $("#tcbg").css('display','block');
 }).mouseout(function(){
   $(".tcbg a").css('color','#808080');
+});
+
+$('.dyp_a').mouseover(function(){
+	$('.dyp').css('margin-top','-30px'),
+  $(".dyp img").css("display", 'none'),
+  // $('.drp').css('display','none'),
+  // $('.dsp').css("display", 'none'),
+  $(".xyc").css('display','block',"margin-top",'50px');
+  // $('.cz').css("margin-top",'10px');
 })
 
 })
