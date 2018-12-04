@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title></title>
+</head>
+
+
+<body>
+	<script type="text/javascript" src="https://unpkg.com/vue"></script>
+<div id="acc">
+	<p v-if="seen">看得到我吗？</p>
+</div>
+
+<div id="app-5">
+	<p>
+		{{
+			message
+		}}	
+	</p>
+	<button v-on:click="reverseMessage">逆转消息</button>
+</div>
+
+<div id="app-4">
+	<ol>
+		<li v-for="todo in todos">{{todo.text}}</li>
+	</ol>
+</div>
+
+<div id="app-6">
+	<p>{{
+		messagea
+	}}</p>
+	<input type="" name="" v-model='messagea	'>
+</div>
+	<script type="text/javascript">
+	//var app3 = new Vue({
+	//	el:"#acc",
+	//	data:{
+	//		seen : true
+		//}
+	//})
+     var app5 = new Vue({
+     	el:"#app-5",
+     	data : {
+     		message : 'Hello Vue.js!'
+     	},
+     	methods:{
+     		reverseMessage : function () {
+     			this.message = this.message.split('').reverse().join('')
+     		}
+     	}
+     })
+	var app4 = new Vue({
+		el : '#app-4',
+		data : {
+			todos : [
+				{text :'学习javascript'},
+				{text:'学习 Vue'},
+				{text:'整个牛项目'}
+			]
+		}
+	})
+
+	var app6 = new Vue({
+		el : '#app-6',
+		data : {
+			messagea:'Hello Vue!'
+		}
+	})
+	</script>
+</body>
+</html>
