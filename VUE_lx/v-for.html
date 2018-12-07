@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>v-for</title>
+</head>
+<script type="text/javascript" src="https://unpkg.com/vue"></script>
+
+<body >
+  <ul id="demo">
+    <li v-for="item in items" class="item-{{$index}}">
+      {{$index}} -{{parentMessage}}  {{item.msg}}
+    </li>
+  </ul>
+</body>
+  <script type="text/javascript">
+    var demo = new Vue({
+      el:'#demo',
+      data:{
+        items:[
+        <!-- parentMessage:'滴滴', -->
+        {msg:'滴滴顺风车'},
+        {msg:'滴滴专车'}
+        ]
+      }
+    })
+  </script>
+</html>

@@ -35,18 +35,36 @@
       <option value="lawyer">律师</option>
     </select>
   </form>
+
+<div id="exam">
+  <input v-model="msg" lazy><br>
+  {{msg}}
+</div>
+
+
   <script type="text/javascript">
     new Vue({
       el:'#example',
       data:{
         data:{
+
           name:"",
           sex:'',
           interest:[],
           identity:''
+
         }
       }
     })
+
+    var exam11 = new Vue({
+      el:'#exam',
+      data:{
+        msg:"内容改变在chang事件后改变的~"
+      }
+    });
+
+
   </script>
 </body>
 </html>

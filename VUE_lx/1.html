@@ -11,37 +11,48 @@
 <!-- <div id="acc" >
 <div  :class="[test1,test2]">你好嘛？</div>
 </div> -->
-<div id="app-2">
+<div id="app-6">
 	<p>{{message}}</p>
-	<button v-on:click="remeg">转变</button>
+	<input v-model="message">
 </div>
 
+<!-- v-bind -->
 
+<div id="app-7">
+	<ol>
+		<todo-item
+		v-for='item in groceryList'
+		v-bind:todo='item'
+		v-bind:key="item.id"
+		>
 
+		</todo-item>
+	</ol>
+</div>
 <!-- <div id="bbb">{{waaa}}</div> -->
 <script type="text/javascript" src="https://unpkg.com/vue"></script>
-<script type="text/javascript">了                                                            
-
-	// new Vue({
-	// 	el :'#acc',
-	// 	data :{
-	// 		test1:{
-	// 			color:'red'
-	// 			}
-	// 	}
-	// })
-	var app2 = new Vue({
-		el:'#app-2',
-		data:{
-			message:'Hello Vue.js!'
-		},
-		methods:{
-			remeg : function (){
-				this.message = this.message.split('').reverse().join(''); // 我就问你为什么不加分号!!!
+<script type="text/javascript">
+		var app6 = new Vue({
+			el:'#app-6',
+			data:{
+				message:'Hello Vue!'
 			}
-		}
-		
-	})
+		})
+
+ Vue.component('todo-item',{
+	 props:['todo'],
+	 template:'<li>{{todo.text}}</li>'
+ })
+ var app7 = new Vue({
+	 el: '#app-7',
+	 data:{
+		 groceryList:[
+			 {id:0,text:'素菜'},
+			 {id:1,text:'奶酪'},
+			 {id:2,text:'随便其他什么人吃的东西'}
+		 ]
+	 }
+ })
 </script>
 </body>
 </html>
