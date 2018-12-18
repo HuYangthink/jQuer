@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<script type="text/javascript" src="https://unpkg.com/vue"></script>
+
+<body>
+<div id="vue-app">
+  <h1> Ebents</h1>
+  <button v-on:click="add(1)">加一岁</button>
+  <button v-on:click="js(1)">减一岁</button>
+  <button v-on:dblclick="add(10)">加十岁</button>
+  <button v-on:dblclick="js(10)">减十岁</button>
+  <p>My age is {{age}}</p>
+
+  <div id="canvas" v-on:mousemove="updateXY">{{x}},{{y}}</div>
+
+      <button v-on:click="say">弹出1</button>
+      <button v-on:click="sayc">弹出2</button>
+
+
+<!-- <input type="text" name="" value="0" id="kua"> -->
+
+</div>
+<script src="app1.js"></script>
+<link rel="stylesheet" href="style.css">
+</body>
+</html>

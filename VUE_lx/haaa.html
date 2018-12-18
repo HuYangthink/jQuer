@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<script type="text/javascript" src="https://unpkg.com/vue"></script>
+
+<body>
+<div id="vue-app">
+  <div id="canvas" @mousemove="updateXY">
+    {{x}},{{y}} -
+    <span @mousemove.stop="">Stop Moving</span>
+
+
+
+  </div>
+</div>
+
+<div id="acc-app">
+  <h1>键盘 Events</h1>
+  <label>姓名：</label>
+  <input ref='name' type="text" v-on:keyup.enter='logName' v-model.enter="name">
+  <span>{{name}}</span>
+  <label>年龄:</label>
+  <input ref="age" type="text" name="" value="" v-on:keyup.enter="logAge" v-model.enter='age'>
+  <span>{{age}}</span>
+</div>
+
+
+<div id="pp">
+  <h1>Computed  计算机属性</h1>
+  <button type="button" name="button" v-on:click="a++">Add to A</button>
+  <button type="button" name="button" v-on:click="b++">Add to b</button>
+  <p>A-{{a}}</p>
+  <p>b-{{b}}</p>
+  <p>Age + A = {{addToA()}}</p>
+  <p>Age + B = {{addToB()}}</p>
+
+</div>
+
+
+<div id="vue-a">
+  <h1>动态 CSS Class</h1>
+  <h2 >示例 1</h2>
+  <!-- <div v-on:click="changeColor=!changeColor" v-bind:class="{changeColor:changeColor}">
+    <span>Henry</span>
+  </div> -->
+
+  <h2>示例 2</h2>
+  <button v-on:click="changeColor=!changeColor">change color</button>
+  <button v-on:click="changeLength=!changeLength">change length</button>
+  <div v-bind:class="compClasses">
+    <span>Hanty</span>
+  </div>
+</div>
+</body>
+<script src="hhh.js"></script>
+<link rel="stylesheet" href="hhh.css">
+</html>
