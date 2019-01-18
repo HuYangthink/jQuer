@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="button">请求文本</button>
+  <script>
+    document.getElementById('button').addEventListener('click',loadText);
+    function loadText(){
+      // document.write('hello world !!!');
+      //创建XMLHttpRequest对象
+      var xhr = new XMLHttpRequest();
+      // document.write(xhr);
+      // console.log(xhr);
+      // .open(type,url/file,async)
+      xhr.open("GET",'sample.txt',true);
+      //两种方式请求 onload / onreadystattechange
+      // xhr.onload = function (){
+      //   document.write(this.responseText);
+      //
+      // }
+      xhr.onreadystatechange = function (){     //两次
+        document.write(this.responseText);
+      }
+      // 发送请求
+      xhr.send();
+    }
+  </script>
+</body>
+</html>
